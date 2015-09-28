@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<!--[if lt IE 7 ]> <html class="ie ie6 no-js" lang="en"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 no-js" lang="en"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 no-js" lang="en"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 no-js" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="en"><!--<![endif]-->
+	<head>
+	{% load staticfiles %}
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<title>Contact Us</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Your name" />
+		<link rel="shortcut icon" href="../favicon.ico"> 
+		<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap.min.css" %}">
+		<!-- <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" %}">
+		<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" %}"> -->
+		<link rel="stylesheet" type="text/css" href="{% static "css/font.min.css" %}">
+
+		<link rel="stylesheet" type="text/css" href="{% static "css/bootstrap-modal-carousel.min.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "css/style3.css" %}" />
+		<link rel="stylesheet" type="text/css" href="{% static "css/tabs.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "css/demo.css" %}">
+		<link rel="stylesheet" type="text/css" href="{% static "css/tabstyles.css" %}">
+		<!-- <link rel="stylesheet" type="text/css" href="{% static "css/events1.css" %}"> -->
+		<script src="http://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+		<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+		<!-- <link rel="stylesheet" type="text/css" href="{% static "css/events.css" %}"> -->
+		<!-- <link rel="stylesheet" type="text/css" href=""> -->
+		<style type="text/css">
+/*			@font-face {
+		    font-family: LCD_Solid;
+		    src: url(fonts/LCD_Solid.ttf);
+		}*/
+		
+		@import url(http://fonts.googleapis.com/css?family=Lato:300,400);
+
+
+		.place{
+			vertical-align: center;
+			padding-left: 90px;
+			padding-top: 50px;
+			width: 1100px;
+			height: 2000px;
+		}
+
+
+
+		#landing{
+			height:100vh;
+			width:100%;
+			background-color:#00040a;
+			position:fixed;
+			top:0;
+			left:0;
+			z-index:2999;
+			
+		}
+
+		.land-btn{
+		
+			text-align:center;
+			opacity:0;
+			text-decoration:none;
+			background-color:#e74c3c;
+			padding:10px;
+			color:#010017;
+			font-weight:bold;
+			border-radius:5px;
+		}
+		.land-btn:hover{
+			text-decoration: none;
+			color:#e74c3c;
+			background-color: transparent;
+			border:1px solid #e74c3c;
+			cursor:pointer;		
+		}
+		.circle{
+			width:200px;
+			height: 200px;
+			border-radius: 50%;
+			padding: 20px;
+
+		}
+
+
+#updates{
+		
+		overflow:auto;
+		color:white;
+		font-family:Electrolize;
+		text-align: center;
+		font-size: 85px;
+		margin-top: -20px;
+}
+
+#updates > ol>li{
+	margin-bottom: 15px;
+
+	}
+
+.form_class{
+  text-align: center;
+  width: 300px;
+  margin: 0 auto;
+}
+
+.field input:focus {
+    border-color: #f00;
+}
+
+.field {
+    z-index: 1;
+    text-align: center;
+    margin-top: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 0px;
+    width: 320px;
+    clear: both;
+}
+
+.field input {
+	
+	background: transparent;
+    z-index: 1;
+    font-size: 14px;
+    margin: 0;
+    text-align: left;
+    padding: 9px 14px;
+    clear: both;
+    border: 2px solid #ccc;
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    width: 300px;
+    outline: none;
+    border-radius: 4px;
+    color:white;
+}
+
+.button{
+    background: #175B50; 
+    color: #fff;
+    display: inline-block;
+    border-radius: 0px;
+    text-align: center;
+    line-height: 2.5em;
+    padding: 0 6.0em;
+    text-decoration: none;  
+    margin-top: 20px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-size: 15px;
+
+}
+
+/* Float Shadow */
+.hvr-float-shadow {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.hvr-float-shadow:before {
+  pointer-events: none;
+  position: absolute;
+  z-index: -1;
+  content: '';
+  top: 100%;
+  left: 5%;
+  height: 10px;
+  width: 90%;
+  opacity: 0;
+  background: -webkit-radial-gradient(center, ellipse, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.35) 0%, rgba(0, 0, 0, 0) 80%);
+  /* W3C */
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform, opacity;
+  transition-property: transform, opacity;
+}
+.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  /* move the element up by 5px */
+}
+.hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+  opacity: 1;
+  -webkit-transform: translateY(5px);
+  transform: translateY(5px);
+  /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
+}
+
+
+.event-name{
+	font-family:Sol Thin;
+	font-size:72px;
+	color:white;
+}
+@media screen and (max-width: 768px){
+	.web{
+		display: none;
+	}
+	.mob{
+		display: block;
+	}
+}
+
+@media screen and (min-width: 768px){
+	.web{
+		display: block;
+	}
+	.mob{
+		display: none;
+	}
+}
+
+@media screen and (max-width: 620px){
+
+.center-on-mob{
+	text-align:center;
+}
+.justify-on-mob{
+	text-align: justify;
+}
+
+.event-name{
+
+	font-size:36px;
+
+}
+
+.content-wrap section p {
+  margin: 0;
+  padding: 0.75em 0;
+  font-size: 1.2em;
+  line-height: 1.3;
+}	
+
+
+
+	.logoh{
+			display: none;
+	}
+	.logov{
+			display: block;
+	}
+}
+
+@media screen and (min-width: 620px){
+	.logoh{
+			display: block;
+	}
+	.logov{
+			display: none;
+	}
+}
+
+  .sidebar{
+        position:fixed;
+        top:70px;
+        left:-220px;
+        width:220px;
+        height:100%;
+        background-color:white;
+        z-index:50;
+    }
+   .item-icon{
+   	width:66px;
+   	float:left;
+   	font-size:2em;
+   	padding:10px;
+   	text-align:center;
+   	color:black;
+   }
+
+   .item-title{
+   		width:152px;
+   		float:right;
+   		padding-left:10px;
+   }
+
+   .item-title>h3{
+   		font-size: 18px;
+   		margin-top: 17px;
+   		color: black;
+   }
+   .sidebar-item>a:focus,.sidebar-item>a:active{
+   		color:white;
+   		background-color: black;
+   }
+
+   .sidebar-item.active{
+   			background-color: rgba(0,0,0,0.1);
+
+   }
+
+   .close-modal{
+   	height:50px;width:50px;margin-top:20px;color: transparent;
+	outline: none;	overflow: hidden;border: none;background: url("{% static "/img/cross.png" %}") no-repeat center center;
+   }
+
+   @media screen and (max-width: 620px){
+   		.close-modal{
+   			width: 30px;
+   			height: 30px;
+   			margin-top: 15px;
+   		}
+   	}
+
+@media screen and (min-width: 993px and max-width: 	1020px){
+.container{
+	padding-left: 100px;
+	padding-right: 25px;
+}
+}
+
+.header-social {
+  display: inline-flex;
+  left: 0;
+  padding-right: 5px;
+  position: relative;
+  top: 0;
+}
+
+.header-social a {
+  background: none repeat scroll 0px 0px #eb5e4c;
+  color: #ffffff;
+  display: inline-block;
+  height: 40px;
+  margin-right: 10px;
+  width: 40px;
+}
+.header-social a i {
+  color: #ffffff;
+  font-size: 17px;
+  line-height: 35px;
+  margin-left: 13px;
+  margin-top: 2px;
+}
+
+#instructions{
+		height:280px;
+		overflow:auto;
+		color:white;
+		font-family:Lato;
+		font-size:22px;
+		margin-top: 30px;	
+}
+
+#instructions > ol>li{
+	margin-bottom: 0px;
+
+	}
+@media screen and (min-width: 768px){
+		.margin-left{
+	margin-left: 13%;
+}
+}
+
+   	</style>
+		<link href='http://fonts.googleapis.com/css?family=Electrolize' rel='stylesheet' type='text/css' />
+		<script defer type="text/javascript" src="{% static "js/modernizr.custom.js" %}"></script>
+
+
+		<style>
+.intro-header {
+    background: url("{% static "img/intro-bg.png" %}") no-repeat ;
+}
+</style>
+	</head>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body>
+
+
+
+
+
+
+
+
+
+
+
+<!-- Contact -->
+			<div class="intro-header">
+				<div class="container">
+					<div class="row" style="margin-top:100px;padding-left:15px;">
+						<div  class="center-on-mob" class="col-md-6">
+							<h2 style="font-family:Sol Thin;color:white;font-size:65px;text-align:center;">Developers</h2>
+						</div>
+					</div>
+					
+					<div class="row">
+					<div class="place">
+				
+						<div class="col-md-15 col-sm-12 col-lg-20 col-xs-15">
+						<br>
+						<div class="row" style="padding-top:5px;">
+							<div class="  col-md-4 col-sm-4 col-lg-3 col-xs-12 " style="text-align:center;">
+								<img src="{% static "img/suvidhi.jpg" %}" class="img-responsive center-block" style="border-radius:50%;">
+								<br>
+								<h4 style="color:white;">Suvidhi Chodhary</h4>		
+								<h5 style="color:white;"><i class="fa fa-phone" style="color:#2eb398;font-size:1.5em;"></i>&nbsp;+91&nbsp;7303642299</h5>
+								<h5 style="color:white;"><i class="fa fa-envelope" style="color:#2eb398;font-size:1.5em;"></i>&nbsp;suvidhic@gmail.com</h5>
+							</div>
+
+							<div class="  col-md-4 col-sm-4 col-lg-3 col-xs-12 " style="text-align:center;">
+								<img src="{% static "img/ibti.JPG" %}" class="img-responsive center-block" style="border-radius:50%;">
+								<br>
+								<h4 style="color:white;">Ibtisam Dalvi</h4>
+								<h5 style="color:white;"><i class="fa fa-phone" style="color:#2eb398;font-size:1.5em;"></i>&nbsp;+91&nbsp;9921399286</h5>
+								<h5 style="color:white;"><i class="fa fa-envelope" style="color:#2eb398;font-size:1.5em;"></i>&nbsp;ibtidalvi@gmail.com  </h5>
+							</div>
+							<div class="  col-md-4 col-sm-4 col-lg-3 col-xs-12 " style="text-align:center;">
+								<img src="{% static "img/abhi.jpg" %}" class="img-responsive center-block" style="border-radius:50%;">
+								<br>
+								<h4 style="color:white;">Abhishek Ghorpade</h4>
+								<h5 style="color:white;"><i class="fa fa-phone" style="color:#2eb398;font-size:1.5em;"></i>&nbsp;+91&nbsp;7387600005</h5>
+								<h5 style="color:white;"><i class="fa fa-envelope" style="color:#2eb398;font-size:1.5em;"></i>&nbsp; abhishek24g@gmail.com</h5>
+							</div>
+
+							<div class="  col-md-4 col-sm-4 col-lg-3 col-xs-12 " style="text-align:center;">
+								<img src="{% static "img/swap.jpg" %}" class="img-responsive center-block" style="border-radius:50%;">
+								<br>
+								<h4 style="color:white;">Swapnil Khandekar</h4>
+								<h5 style="color:white;"><i class="fa fa-phone" style="color:#2eb398;font-size:1.5em;"></i>&nbsp;+91&nbsp;8275454980</h5>
+								<h5 style="color:white;"><i class="fa fa-envelope" style="color:#2eb398;font-size:1.5em;"></i>&nbsp;swa.khandekar@gmail.com</h5>
+							</div>
+							
+						</div>
+						</div>
+
+						</div>
+					</div>
+				</div>
+				</div>
+
+
+
+
+
+	<!--<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>-->
+	<script  src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script  type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<!--<script type="text/javascript" src="js/bootstrap.min.js"></script>-->
+	<script  type="text/javascript" src="{% static "js/bootstrap-modal-carousel.min.js" %}"></script>
+	<script  type="text/javascript" src="{% static "js/cbpFWTabs.js" %}"></script>
+	<script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+	<script type="text/javascript" src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="{% static "js/kinetic.js" %}"></script>
+	<script type="text/javascript">  
+    $('document').ready(function() {
+        'use strict';
+        
+    	$('.countdown').final_countdown({
+            'start': 1436884200,
+            'end': 1439562600,
+            'now': Date.now() / 1000 | 0        
+        });
+    });
+	</script>
+
+		<script type="text/javascript">
+		(function() {
+
+			[].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+			new CBPFWTabs( el );
+			});
+
+		})();
+		</script>
+	  <script>
+       $(window).ready(function(){
+
+       	 //hand made side bar
+            var status = 0;//sidebar is inside 1 for outside
+            var count  = 0;
+            var $sidebar = $('#sidebar');
+            var $sidebartoggle=$('#toggleSidebar');
+            function close(){
+                   if(status==1){
+                        $('#black').fadeOut(700);
+                        $sidebar.animate({left:'-220px'},500);
+                        $sidebartoggle.animate({left:'0%'},500);
+                        $sidebartoggle.removeClass('fa-close').addClass('fa-bars');
+                         status=0;
+                     }
+            }
+            function open () {
+                // body...
+                  $('#black').fadeIn(700);
+                    $sidebar.animate({left:'0%'},500);
+                    $sidebartoggle.animate({left:'220px'},500);
+                    $sidebartoggle.removeClass('fa-bars').addClass('fa-close');
+                    status=1;
+            }
+
+            $sidebartoggle.click(function() {             
+                if (status==0) {
+                  open();
+                }else{
+                  close();
+                }          
+            });
+
+
+           $('#black').click(function() {
+            close();
+           });
+
+           $('.sidebar-item > a').click(function() {
+           		close();
+           });
+          
+          //END OF MOBILE SIDEBAR
+           
+		var $pisblogo = $('#img1');
+		var $credlogo = $('#img2');
+		var $credlogov = $('#img2v');
+		var $landing = $('#landing');
+
+       	$(window).resize(function() {
+       		var width = $(this).width();
+       		if(width<768){
+       			$sidebartoggle.show();
+       			$credlogo.hide();
+       			
+       		}else{
+       			$sidebartoggle.hide();
+       			$credlogo.show();
+       			
+       		}
+       	});
+       	var wid = $(window).width();
+
+       	if(wid<768){
+       		$credlogo.css('display','none');
+
+       		$('#close-landing').click(function() {
+		       	$pisblogo.removeClass('center-block');
+		       	$credlogo.removeClass('center-block');
+		       	$pisblogo.css({position:'fixed'});
+		       	$credlogo.css({position:'fixed'});
+		       	$(this).animate({right:-2000},"fast");
+		       	$(this).hide();
+		       	$('#present').hide();
+		       	$pisblogo.hide();
+		       	//$pisblogo.animate({right:0,top:10,width:120},"slow");
+				
+				$credlogov.css('display','none');
+				$credlogo.css('display','block');       	
+		       	$credlogo.animate({right:10,top:0,width:121,padding:10},"slow");
+
+		       	//$('#landing').delay(200).animate({width:0,height:0},"slow");
+		       	$landing.delay(500).animate({height:70},"slow");
+		       	$landing.css('background-image','none');
+		       	$sidebartoggle.show();
+		       //	$landing.css({'box-shadow':'0px 5px 5px 1px'});
+       	});
+	
+       	}else{
+
+       		$('#close-landing').click(function() {
+	       	$pisblogo.removeClass('center-block');
+	       	$credlogo.removeClass('center-block');
+	       	$pisblogo.css({position:'fixed'});
+	       	$credlogo.css({position:'fixed'});
+	       	$(this).animate({right:-2000},"fast");
+	       	$(this).hide();
+	       	$('#present').hide();
+	       	$pisblogo.animate({right:0,top:0,width:150},"slow");
+	       	$credlogo.animate({left:0,top:0,width:121},"slow");
+	       	$credlogo.css('padding-top','5px');
+	       	$credlogo.css('padding-right','0px');
+	       	$credlogo.css('padding-botttom','20px');
+	       	$credlogo.css('padding-left','10px');
+
+	       	//$('#landing').delay(200).animate({width:0,height:0},"slow");
+	       	$landing.delay(500).animate({height:70},"slow");
+	       	$landing.css('background-image','none');
+	       //	$landing.css({'box-shadow':'0px 5px 5px 1px'});
+       	});
+		
+       	}
+
+
+       	$('#close-landing').delay(4000).animate({opacity:1},"slow");
+  
+      $('.sidenavitem').mouseenter(function(){$(this).animate({left:"0px"});}).mouseleave(function(){$(this).animate({left:"-120px"});});
+
+
+      //Active class toggle script
+      $('.sidenav > a').click(function() {
+      		$('.sidenav > a').removeClass('active');
+      		$(this).addClass("active");
+      
+      });
+
+       $('.sidebar-item').click(function() {
+      		$('.sidebar-item').removeClass('active');
+      		$(this).addClass("active");
+      
+      });
+
+
+    });
+       $(window).scroll(function() {
+       		var top = $(this).scrollTop();
+       		if(top>20){
+       			$('.brand').animate({width:'7rem',opacity:0.8,'background-color':'#2c3e50'},'fast');
+       		}
+       		if(top<20){
+       			$('.brand').animate({width:'10rem',opacity:1,'background-color':'#f0f1f1'},'fast');
+       		}	
+       		
+       });
+  </script>
+
+
+	</body>
+</html>

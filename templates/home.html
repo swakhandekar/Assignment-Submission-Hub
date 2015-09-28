@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+{% load staticfiles %}
+<style>
+.right {
+    position: absolute;
+    top: 50px;
+    
+    
+    width: 1300px;
+   
+    padding: 20px;
+}
+
+
+.center {
+    font-size: 100%;
+    top: 100px;
+    padding: 100px;
+   
+}
+</style>
+<style>
+.intro-header {
+    background: url("{% static "img/intro-bg.jpg" %}") no-repeat center center;
+}
+</style>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Assignment Hub- PICT</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static "css/bootstrap.min.css" %}"rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="{% static "css/landing-page.css" %}"rel="stylesheet">
+    <link href="{% static "css/animate.min.css" %}"rel="stylesheet">
+    <!-- Custom Fonts -->
+    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+
+ <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+
+
+
+    
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top topnav" role="navigation">
+        <div class="container topnav">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand topnav" href="www.pict.edu">Pune Institute of Computer Technology</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="#about" class="page-scroll">About</a>
+                    </li>
+                    <li>
+                        <a href="#services" class="page-scroll">Services</a>
+                    </li>
+                    <li>
+                        <a href="/contact_us" class="page-scroll">Contact</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container -->
+    </nav>
+
+
+    <!-- Header -->
+    <a name="about"></a>
+    <div class="intro-header">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-lg-20">
+                    <div class="intro-message">
+                    <div class="center">
+                    <div class="animated fadeInDown">
+                        <h1>Assignment Hub</h1>
+                        </div>
+                        <!--
+                        <h3>A Template by Start Bootstrap</h3>
+                        -->
+                        <div class="animated fadeInUp">
+                        <hr class="intro-divider">
+                        <ul class="list-inline intro-social-buttons">
+                            <li>
+                                <a href="#services" class="btn btn-default btn-lg page-scroll"><i class="fa fa-twitter fa-fw"></i> <span class="network-name">Login</span></a>
+
+                            </li>
+                            <li>
+                                <a href="#services" class="btn btn-default btn-lg page-scroll"><i class="fa fa-github fa-fw"></i> <span class="network-name">Sign Up</span></a>
+                            </li>
+                            
+                        </ul>
+                    </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.intro-header -->
+
+    <!-- Page Content -->
+
+    <a  name="services"></a>
+    <div class="content-section-a">
+
+        <div class="container">
+            <div class="row">
+               
+                    
+                    <div class="clearfix"></div>
+                    
+                </div><div class="container">
+    <div class="row">
+        <div class="span12">
+            <div class="" id="loginModal">
+              <!-- <div class="modal-header">
+               
+               
+              </div> -->
+              <div class="modal-body">
+                
+
+ <div class="container">
+                       
+<!--sign in-->
+
+                       
+   <div class="right">
+    <div class="col-lg-3 col-lg-offset-7 col-sm-2">
+        <h2>Have an Account?</h2>
+        <h3 class="form-signin-heading">Please sign in</h3>
+        <form class="form-signin" method ="POST" action = "/login/">
+            {% csrf_token %}
+            <label for="inputUsername" class="sr-only"></label>
+            <input type="text" class="form-control" placeholder="Username" required autofocus name="uname"><br>
+            <label for="inputPassword" class="sr-only"></label>
+            <input name="passwd" type="password" id="inputPassword" class="form-control" placeholder="Password" required><br>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        </form>
+    </div>
+   </div>
+
+  <h2>Sign Up</h2>
+  <ul class="nav nav-pills">
+    <li class="active"><a data-toggle="pill" href="#home">Student</a></li>
+    <li>
+        <a data-toggle="pill" href="#menu3">Teacher</a>
+    </li>
+   
+  </ul>
+  
+<div class="tab-content">
+  
+<!--student-->
+
+    <div id="home" class="tab-pane fade in active">
+        <div class="col-lg-4 col-lg-offset-0 col-sm-10">
+        <h4>Enter Your Details</h4>
+  
+        <form action="/sign_up_stud/" method="POST">
+            {% csrf_token %}
+            <label for="inputUsername" class="sr-only"></label>
+            <input type="text" class="form-control" placeholder="Username" name="uname" required autofocus><br>
+                            
+            <label for="inputFname" class="sr-only"></label>
+            <input type="text" class="form-control" placeholder="First Name" name="fname" required autofocus><br>
+
+            <label for="inputLname" class="sr-only"></label>
+            <input type="text" class="form-control" placeholder="Last Name" name="lname" required autofocus><br>
+
+            <label for="inputRollno" class="sr-only"></label>
+            <input type="text" class="form-control" placeholder="Roll No" name="rollno" required autofocus><br>
+                            
+            <label for="inputEmail" class="sr-only"></label>
+            <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="email" required autofocus><br>
+        
+            <label for="inputPassword" class="sr-only"></label>
+            <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="passwd" required><br>
+        
+            <ul class="nav nav-tabs">
+       
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">TE 1<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    <li>
+                        <div class="radio">
+                        <label><input type="radio" value="K1" name="optradio">K1</label>
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="radio">
+                        <label><input type="radio" value="L1" name="optradio">L1</label>
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="radio">
+                        <label><input type="radio" value="M1" name="optradio">M1</label>
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="radio">
+                        <label><input type="radio" value="N1" name="optradio">N1</label>
+                        </div> 
+                    </li>                                   
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">TE 2<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    <li>
+                        <div class="radio">
+                        <label><input type="radio" value="K2" name="optradio">K2</label>
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="radio">
+                        <label><input type="radio" value="L2" name="optradio">L2</label>
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="radio">
+                        <label><input type="radio" value="M2" name="optradio">M2</label>
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="radio">
+                        <label><input type="radio" value="N2" name="optradio">N2</label>
+                        </div> 
+                    </li>                                   
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">TE 3<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    <li>
+                        <div class="radio">
+                        <label><input type="radio" value="K3" name="optradio">K3</label>
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="radio">
+                        <label><input type="radio" value="L3" name="optradio">L3</label>
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="radio">
+                        <label><input type="radio" value="M3" name="optradio">M3</label>
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="radio">
+                        <label><input type="radio" value="N3" name="optradio">N3</label>
+                        </div> 
+                    </li>                                   
+                    </ul>
+                </li>
+
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">TE 4<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                    <li>
+                        <div class="radio">
+                        <label><input type="radio" value="K4" name="optradio">K4</label>
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="radio">
+                        <label><input type="radio" value="L4" name="optradio">L4</label>
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="radio">
+                        <label><input type="radio" value="M4" name="optradio">M4</label>
+                        </div> 
+                    </li>
+                    <li>
+                        <div class="radio">
+                        <label><input type="radio" value="N4" name="optradio">N4</label>
+                        </div> 
+                    </li>                                   
+                    </ul>
+                </li>
+
+
+            </ul>
+            <br>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
+
+        </form>
+      </div>
+    </div>
+
+
+<!--teacher-->
+    <div id="menu3" class="tab-pane fade noscript">
+      <div class="col-lg-4 col-lg-offset-0 col-sm-10">
+      <h4>Enter Your Details</h4>
+      <form action="/sign_up_teach/" method="POST"> 
+        {% csrf_token %}
+        <label for="inputText" class="sr-only">User Id</label>
+        <input type="text" id="inputText" class="form-control" placeholder="User Id" name="uname" required autofocus><br>
+                        
+        <label for="inputText" class="sr-only">Name</label>
+        <input type="text" id="inputText" class="form-control" placeholder="First Name" name="fname" required autofocus><br>
+
+        <label for="inputText" class="sr-only">Last Name</label>
+        <input type="text" id="inputText" class="form-control" placeholder="Last Name" name="lname" required autofocus><br>
+
+        <label for="inputText" class="sr-only">Employee Number</label>
+        <input type="text" id="inputText" class="form-control" placeholder="Employee Number" name="empno" required autofocus><br>
+
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" name="email" required autofocus><br>
+        
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Password" name="passwd" required><br> 
+        <h5>Select Batches</h5>
+            
+            K1<input type="checkbox" name="batch" value="K1" />
+            L1<input type="checkbox" name="batch" value="L1" />
+            M1<input type="checkbox" name="batch" value="M1" />
+            N1<input type="checkbox" name="batch" value="N1" />
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            K2<input type="checkbox" name="batch" value="K2" />
+            L2<input type="checkbox" name="batch" value="L2" />
+            M2<input type="checkbox" name="batch" value="M2" />
+            N2<input type="checkbox" name="batch" value="N2" />
+            <br>
+            K3<input type="checkbox" name="batch" value="K3" />
+            L3<input type="checkbox" name="batch" value="L3" />
+            M3<input type="checkbox" name="batch" value="M3" />
+            N3<input type="checkbox" name="batch" value="N3" />
+            &nbsp&nbsp&nbsp&nbsp&nbsp
+            K4<input type="checkbox" name="batch" value="K4" />
+            L4<input type="checkbox" name="batch" value="L4" />
+            M4<input type="checkbox" name="batch" value="M4" />
+            N4<input type="checkbox" name="batch" value="N4" />
+            <br>
+            <br>
+
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Create Account</button>
+      </form>
+     </div>
+    </div>
+
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+   
+
+    <footer>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+    
+                <ul class="list-inline">
+                    <li>
+                        <a class="page-scroll" href="#">Home</a>
+                    </li>
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a class="page-scroll" href="#about">About</a>
+                    </li>
+                    
+                    <li class="footer-menu-divider">&sdot;</li>
+                    <li>
+                        <a class="page-scroll" href="/contact_us">Contact</a>
+                    </li>
+                </ul>
+                    <p class="copyright text-muted small">Copyright &copy; Assignment Hub 2015. All Rights Reserved</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery -->
+    <script src="{% static "js/jquery.js" %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="{% static "js/bootstrap.min.js" %}"></script>
+        <script type="text/javascript"> $(document).ready(function () { window.scrollTo(0,0); }); </script>
+
+
+
+        <script type="text/javascript">
+
+
+
+
+
+
+
+
+/* Smooth scrolling
+   Changes links that link to other parts of this page to scroll
+   smoothly to those links rather than jump to them directly, which
+   can be a little disorienting.
+   
+   sil, http://www.kryogenix.org/
+   
+   v1.0 2003-11-11
+   v1.1 2005-06-16 wrap it up in an object
+*/
+
+var ss = {
+  fixAllLinks: function() {
+    // Get a list of all links in the page
+    //var allLinks = document.getElementsByTagName('a');
+    var allLinks = $('a.page-scroll');
+    // Walk through the list
+    for (var i=0;i<allLinks.length;i++) {
+      var lnk = allLinks[i];
+      if ((lnk.href && lnk.href.indexOf('#') != -1) && 
+          ( (lnk.pathname == location.pathname) ||
+        ('/'+lnk.pathname == location.pathname) ) && 
+          (lnk.search == location.search)) {
+        // If the link is internal to the page (begins in #)
+        // then attach the smoothScroll function as an onclick
+        // event handler
+        ss.addEvent(lnk,'click',ss.smoothScroll);
+      }
+    }
+  },
+
+  smoothScroll: function(e) {
+    // This is an event handler; get the clicked on element,
+    // in a cross-browser fashion
+    if (window.event) {
+      target = window.event.srcElement;
+    } else if (e) {
+      target = e.target;
+    } else return;
+
+    // Make sure that the target is an element, not a text node
+    // within an element
+    if (target.nodeName.toLowerCase() != 'a') {
+      target = target.parentNode;
+    }
+  
+    // Paranoia; check this is an A tag
+    if (target.nodeName.toLowerCase() != 'a') return;
+  
+    // Find the <a name> tag corresponding to this href
+    // First strip off the hash (first character)
+    anchor = target.hash.substr(1);
+    // Now loop all A tags until we find one with that name
+    var allLinks = document.getElementsByTagName('a');
+    var destinationLink = null;
+    for (var i=0;i<allLinks.length;i++) {
+      var lnk = allLinks[i];
+      if (lnk.name && (lnk.name == anchor)) {
+        destinationLink = lnk;
+        break;
+      }
+    }
+    if (!destinationLink) destinationLink = document.getElementById(anchor);
+
+    // If we didn't find a destination, give up and let the browser do
+    // its thing
+    if (!destinationLink) return true;
+  
+    // Find the destination's position
+    var destx = destinationLink.offsetLeft; 
+    var desty = destinationLink.offsetTop;
+    var thisNode = destinationLink;
+    while (thisNode.offsetParent && 
+          (thisNode.offsetParent != document.body)) {
+      thisNode = thisNode.offsetParent;
+      destx += thisNode.offsetLeft;
+      desty += thisNode.offsetTop;
+    }
+  
+    // Stop any current scrolling
+    clearInterval(ss.INTERVAL);
+  
+    cypos = ss.getCurrentYPos();
+  
+    ss_stepsize = parseInt((desty-cypos)/ss.STEPS);
+    ss.INTERVAL =
+setInterval('ss.scrollWindow('+ss_stepsize+','+desty+',"'+anchor+'")',10);
+  
+    // And stop the actual click happening
+    if (window.event) {
+      window.event.cancelBubble = true;
+      window.event.returnValue = false;
+    }
+    if (e && e.preventDefault && e.stopPropagation) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+  },
+
+  scrollWindow: function(scramount,dest,anchor) {
+    wascypos = ss.getCurrentYPos();
+    isAbove = (wascypos < dest);
+    window.scrollTo(0,wascypos + scramount);
+    iscypos = ss.getCurrentYPos();
+    isAboveNow = (iscypos < dest);
+    if ((isAbove != isAboveNow) || (wascypos == iscypos)) {
+      // if we've just scrolled past the destination, or
+      // we haven't moved from the last scroll (i.e., we're at the
+      // bottom of the page) then scroll exactly to the link
+      window.scrollTo(0,dest);
+      // cancel the repeating timer
+      clearInterval(ss.INTERVAL);
+      // and jump to the link directly so the URL's right
+      location.hash = anchor;
+    }
+  },
+
+  getCurrentYPos: function() {
+    if (document.body && document.body.scrollTop)
+      return document.body.scrollTop;
+    if (document.documentElement && document.documentElement.scrollTop)
+      return document.documentElement.scrollTop;
+    if (window.pageYOffset)
+      return window.pageYOffset;
+    return 0;
+  },
+
+  addEvent: function(elm, evType, fn, useCapture) {
+    // addEvent and removeEvent
+    // cross-browser event handling for IE5+,  NS6 and Mozilla
+    // By Scott Andrew
+    if (elm.addEventListener){
+      elm.addEventListener(evType, fn, useCapture);
+      return true;
+    } else if (elm.attachEvent){
+      var r = elm.attachEvent("on"+evType, fn);
+      return r;
+    } else {
+      alert("Handler could not be removed");
+    }
+  } 
+}
+
+ss.STEPS = 25;
+
+ss.addEvent(window,"load",ss.fixAllLinks);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//                 $(function() {
+//   $('a[href*=#]:not([href=#])').click(function() {
+//     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+//       var target = $(this.hash);
+//       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+//       if (target.length) {
+//         $('html,body').animate({
+//           scrollTop: target.offset().top
+//         }, 1000);
+//         return false;
+//       }
+//     }
+//   });
+// });
+        </script>
+</body>
+</html>
